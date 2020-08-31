@@ -652,12 +652,13 @@
     // end of education
 
     // skill
-    window.onscroll = function(){animate_content();};
+    // window.onscroll = function(){animate_content();};
+    document.getElementsByClassName('skill_container')[0].addEventListener("mouseover", animate_content);
 
     function animate_content()
     {
-      if (document.body.scrollTop > 2200 || document.documentElement.scrollTop > 2200)
-      {
+      // if (document.body.scrollTop > 2200 || document.documentElement.scrollTop > 2200)
+      // {
         document.getElementsByClassName("red_gear")[0].style.transform = "rotate(0deg)";
         document.getElementsByClassName("yellow_gear")[0].style.transform = "rotate(360deg)";
         document.getElementsByClassName("green_gear")[0].style.transform = "rotate(720deg)";
@@ -769,11 +770,10 @@
         }
 
       }
-      else
-      {
-
-      }
-    }
+      // else
+      // {
+      //
+      // }
 
     // var python_obj = document.getElementsByClassName("python_skill")[0];
     // var cplusplus_obj = document.getElementsByClassName("cplusplus_skill")[0];
