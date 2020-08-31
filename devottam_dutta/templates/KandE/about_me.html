@@ -1,0 +1,810 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en" dir="ltr">
+<style media="screen">
+  body {font-family: Monospace;}
+  .main_container{
+  }
+  .back_image{
+    background-image: url({% static 'images/self_photo1.jpg' %});
+    background-position: top;
+    background-size: cover;
+    background-attachment: fixed;
+    /* filter: blur(4px); */
+  /* -webkit-filter: blur(4px); */
+    /* background-blend-mode: lighten; */
+    height: 800px;
+    transition: height 1s, background-position 1s;
+  }
+  /* .back_image:hover{
+    height: 500px;
+    background-position: center;
+  } */
+
+  .h1_pos1{
+    margin-left: 50px;
+    padding-top: 100px;
+    height: 250px;
+    width: 500px;
+    background-color: rgba(20, 33, 61, 1);
+    /* background-image: linear-gradient(rgba(20, 33, 61, 1), rgba(20, 33, 61, 0)); */
+    transition: height 1s;
+  }
+
+  /* .h1_pos1:hover{
+    height: 100px;
+  } */
+
+  .abtme_h1{
+    padding-top: 0px;
+    transition: padding-top 1s;
+    color: rgba(252, 163, 17, 1);
+    text-align: center;
+  }
+
+  /* .abtme_h1:hover{
+    padding-top: 0px;
+  } */
+
+  /* About me------------------------------------------- */
+
+  .abtme_container{
+    display: flex;
+    background-color: rgba(229, 229, 229, 1);
+    /* flex-wrap: wrap; */
+  }
+
+  .abtme_left{
+    flex: 30%;
+    border-right: 2px solid rgba(252, 163, 17, 1);
+  }
+
+  .abtme_right{
+    flex: 70%
+  }
+
+  .para_about_me{
+    text-align: justify;
+    padding: 20px;
+    color: rgba(20, 33, 61, 1);
+  }
+
+  .h2_about_me{
+    padding-left: 10px;
+    color: rgba(20, 33, 61, 1);
+  }
+
+  .abtme_ul{
+    padding-right: 10px;
+  }
+
+  /* education */
+
+  .edu_container{
+    display: flex;
+    align-items: center;
+  /* background-color: #f1f1f1; */
+  }
+
+  .edu_flex_style {
+    background-color: rgba(229, 229, 229, 0.3);
+    margin: 5px;
+    text-align: center;
+    line-height: 28px;
+    /* font-size: 30px; line-height 1s*/
+    flex-grow: 1;
+    transition: flex-grow 1s, margin 1s, background-color 1s;
+    }
+
+  .edu_flex_style:hover{
+    flex-grow: 9;
+    /* line-height: 50px; */
+    /* margin: 1px; */
+    background-color: rgba(229, 229, 229, 1);
+    }
+
+  .edu_image{
+    background-image: url({% static 'images/edu_image.jpg' %});
+    background-position: top;
+    background-size: cover;
+    background-attachment: fixed;
+    /* filter: blur(4px); */
+    /* -webkit-filter: blur(4px); */
+    /* background-blend-mode: lighten; */
+      height: 800px;
+    }
+
+  .h1_pos2{
+    margin-left: 50px;
+    padding-top: 100px;
+    height: 250px;
+    width: 500px;
+    background-color: rgba(20, 33, 61, 1);
+    transition: height 1s;
+  }
+
+  .edu_h1{
+    padding-top: 0px;
+    color: rgba(252, 163, 17, 1);
+    text-align: center;
+  }
+
+  .edu_content{
+    height: 0px;
+    width: 0px;
+    color: rgba(20, 33, 61, 0);
+    border-top: 1px solid rgba(252, 163, 17, 1);
+    overflow: hidden;
+    text-align: center;
+    transition: height 1.5s, width 1.5s, color 5s;
+  }
+
+  /* experience */
+
+  .exp_image{
+    background-image: url({% static 'images/exp_image.jpg' %});
+    background-position: top;
+    background-size: cover;
+    background-attachment: fixed;
+    height: 800px;
+    /* overflow: hidden; */
+  }
+
+  .h1_pos3{
+    margin-left: 50px;
+    padding-top: 100px;
+    height: 250px;
+    width: 500px;
+    background-color: rgba(20, 33, 61, 1);
+    transition: height 1s;
+  }
+
+  .exp_h1{
+    padding-top: 0px;
+    color: rgba(252, 163, 17, 1);
+    text-align: center;
+  }
+
+  .exp_container
+    {
+    display: flex;
+    align-items: center;
+    }
+
+  .exp_flex_style
+    {
+      background-color: rgba(229, 229, 229, 0.3);
+      margin: 5px;
+      text-align: center;
+      /* line-height: 28px; */
+      /* line-height: 28px; */
+      /* font-size: 30px; line-height 1s*/
+      flex-grow: 1;
+      transition: flex-grow 1s, background-color 1s, height 1s, width 1s;
+      }
+
+    .exp_flex_style:hover
+      {
+      flex-grow: 6;
+      /* line-height: 50px; */
+      /* margin: 1px; */
+      background-color: rgba(229, 229, 229, 1);
+      }
+
+    .exp_content
+      {
+      height: 0px;
+      width: 0px;
+      margin-left: 0px;
+      color: rgba(20, 33, 61, 0);
+      border-top: 1px solid rgba(252, 163, 17, 1);
+      overflow: hidden;
+      text-align: center;
+      transition: height 1.5s, width 1.5s, margin-left 1.5s, color 5s;
+    }
+
+    /* Skill */
+
+.h1_pos4
+  {
+    /* margin-top: -125px; */
+    /* margin-left: 50px; */
+    /* margin-left: 0px; */
+    height: 100px;
+    width: 500px;
+    background-color: rgba(20, 33, 61, 1);
+    transition: height 1s;
+
+  }
+
+.skill_h1
+  {
+    padding-top: 0px;
+    color: rgba(252, 163, 17, 1);
+    text-align: center;
+  }
+
+.skill_container
+  {
+    display: flex;
+    background-image: url({% static 'images/human_head.png' %});
+    background-repeat: no-repeat;
+    background-color: rgba(229, 229, 229, 1);
+    height: 750px;
+  }
+
+.gear_group
+  {
+    flex: 50%;
+    border-right: 2px solid rgba(252, 163, 17, 1);;
+    width: 210px;
+    padding-left: 100px;
+    padding-top: 100px;
+    overflow: hidden;
+  }
+
+.red_gear
+{
+  transform: rotate(360deg);
+  transition: transform 60s;
+}
+
+.green_gear_div
+  {
+    padding-left: 70px;
+    margin-top: -88px;
+  }
+
+.green_gear
+  {
+    transform: rotate(0deg);
+    transition: transform 60s;
+  }
+
+.yellow_gear_div
+  {
+    padding-left: 70px;
+    margin-top: -480px;
+  }
+
+.yellow_gear
+  {
+    transform: rotate(0deg);
+    transition: transform 60s;
+  }
+
+.blue_gear_div
+  {
+    padding-left: 100px;
+    margin-top: -80px;
+  }
+
+.blue_gear{
+  transform: rotate(360deg);
+  transition: transform 60s;
+}
+
+.skill_group
+  {
+    flex: 50%;
+  }
+
+.skill_progress
+  {
+  height:100px;
+  width:25%;
+  background-color: rgba(252, 163, 17, 1);
+  transition: width 2s;
+  color: color: rgba(20, 33, 61, 1);
+  }
+
+  .python_skill, .cplusplus_skill, .javascript_skill, .html_css_skill, .mongodb_skill
+    {
+      color: rgba(20, 33, 61, 1);
+      text-align: left;
+    }
+
+    /* footer */
+.footer_content
+  {
+    padding-top: 100px;
+    height: 200px;
+    color: rgba(252, 163, 17, 1);
+    font-size: 25px;
+    background-color: rgba(20, 33, 61, 1);
+    text-align: center;
+  }
+</style>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+  <div class="main_container">
+    <div class="back_image">
+      <div class="h1_pos1">
+        <h1 class="abtme_h1">“To be yourself in a world that is constantly trying to make you something else is the greatest accomplishment.” —Ralph Waldo Emerson.</h1>
+      </div>
+    </div>
+
+<!-- About me  -->
+
+    <div class="abtme_container">
+      <div class="abtme_left">
+        <ul class="abtme_ul">
+          <li>Born</li>
+          <small>24 December 1985, Pune, Maharashtra</small>
+          <li>Nationality</li>
+          <small>Indian</small>
+          <li>Residence Address</li>
+          <small>21 Prantik Ichapur, 24 Paraganas North Post Office Nawabganj West Bengal 743144</small>
+          <li>Occupation</li>
+          <small>Pipeline Technical Director, VFX and Animation</small>
+          <li>Children</li>
+          <small>Sarisha Dutta-Living together</small>
+          <li>Parents</li>
+          <small>Premankur Dutta (Father) Ratna Dutta (Mother)</small>
+          <li>Siblings</li>
+          <small>Srinnwita Dutta (Younger Sister)</small>
+          <li>Signature</li>
+          <img src="{% static 'images/signature.png' %}" alt="no image found" height="100px" width="200px">
+        </ul>
+      </div>
+
+      <div class="abtme_right">
+        <h2 class="h2_about_me">Devottam Dutta</h2>
+        <p class="para_about_me">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+        </p>
+        <hr class="hr_about_me">
+        <h2 class="h2_about_me">Life & Family</h2>
+        <p class="para_about_me">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+        </p>
+      </div>
+    </div>
+
+<!-- End of About me -->
+
+<!-- Education -->
+   <div class="edu_image">
+    <div class="h1_pos2">
+      <h1 class="edu_h1">“The function of education is to teach one to think intensively and to think critically. Intelligence plus character – that is the goal of true education” – Martin Luther King.</h1>
+    </div>
+    <div class="edu_container">
+      <div class="edu_aissce edu_flex_style">
+        <img class="img_aissce" src="{% static 'images/cbse.png' %}" alt="image not found/missing" height="200" width="240">
+        <div class="edu_content">
+          <h2>
+            All India Senior School Certificate Examinations.
+          </h2>
+          <p>Central Board of Secondary Education</p>
+          <p>2003</p>
+        </div>
+      </div>
+      <div class="edu_bca edu_flex_style">
+        <img src="{% static 'images/smu1.png' %}" alt="image not found/missing" height="200" width="240">
+        <div class="edu_content">
+        <h2>
+          Bachelors of Computer Application
+        </h2>
+            <p>Sikkim Manipal University of Health Medical & Technological Sciences</p>
+            <p>2006</p>
+        </div>
+      </div>
+      <div class="edu_mca edu_flex_style">
+        <img src="{% static 'images/mca.png' %}" alt="image not found/missing" height="200" width="240">
+        <div class="edu_content">
+        <h2>
+          Master of Computer Application
+        </h2>
+          <p>Annamalai University</p>
+          <p>2010</p>
+        </div>
+      </div>
+
+    </div>
+
+    </div>
+
+
+<!-- End of Education -->
+
+<!-- Start of Skill -->
+
+    <div class="skill_container">
+      <div class="gear_group">
+        <img class="red_gear" src="{% static 'images/gear_red.png' %}" alt="" height="300px">
+        <div class="green_gear_div">
+          <img class="green_gear" src="{% static 'images/gear_green.png' %}" alt="" height="200px">
+          <div class="yellow_gear_div">
+            <img class="yellow_gear" src="{% static 'images/gear_yellow.png' %}" alt="" height="400px">
+            <div class="blue_gear_div">
+              <img class="blue_gear" src="{% static 'images/gear_blue.png' %}" alt="" height="150px">
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="skill_group">
+        <div class="h1_pos4">
+          <h1 class="skill_h1">“Once you Stop Learning, you Start Dying” - Albert Einstein.</h1>
+        </div>
+        <div class="python_skill">
+          <div class="skill_progress">
+            <h2>PYTHON</h2>
+            <p><span>0</span>/10</p>
+          </div>
+        </div>
+        <div class="cplusplus_skill">
+          <div class="skill_progress">
+            <h2>C++</h2>
+            <p><span>0</span>/10</p>
+          </div>
+        </div>
+        <div class="javascript_skill">
+          <div class="skill_progress">
+            <h2>JAVASCRIPT</h2>
+            <p><span>0</span>/10</p>
+          </div>
+        </div>
+        <div class="html_css_skill">
+          <div class="skill_progress">
+            <h2>HTML/CSS</h2>
+            <p><span>0</span>/10</p>
+          </div>
+        </div>
+        <div class="mongodb_skill">
+          <div class="skill_progress">
+            <h2>MONGODB</h2>
+            <p><span>0</span>/10</p>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+
+
+<!-- End of Skill -->
+
+<!-- Experience -->
+  <div class="exp_image">
+    <div class="h1_pos3">
+      <h1 class="exp_h1">“A mind that is stretched by a new experience can never go back to its old dimensions.” - Oliver Wendell Holmes.</h1>
+    </div>
+    <div class="exp_container">
+
+      <div class="exp_re_item exp_flex_style">
+        <a href="https://www.redesign-group.com/"><img src="{% static 'images/exp_re.jpg' %}" alt="" height="200" width="200"></a>
+        <div class="exp_content">
+          <p>Jan 2019 - April 2020</p>
+          <h2>
+            Pipeline Engineer
+          </h2>
+        </div>
+      </div>
+      <div class="exp_mrx_item exp_flex_style">
+        <a href="https://www.mrxfx.com/"><img src="{% static 'images/exp_mrx.png' %}" alt="" height="200" width="200"></a>
+        <div class="exp_content">
+          <p>Feb 2018 - Jan 2019</p>
+          <h2>
+            Pipeline Technical Director
+          </h2>
+        </div>
+      </div>
+
+      <div class="exp_pfw_item exp_flex_style">
+        <a href="https://www.dneg.com/"><img src="{% static 'images/exp_pfw.jpg' %}" alt="" height="200" width="200"></a>
+        <div class="exp_content">
+          <p>Mar 2016 - Feb 2018</p>
+          <h2>Pipeline Technical Director</h2>
+        </div>
+      </div>
+
+      <div class="exp_prana_item exp_flex_style">
+        <a href="#"><img src="{% static 'images/exp_prana.jpg' %}" alt="" height="200" width="200"></a>
+        <div class="exp_content">
+          <p>Apr 2013 - Mar 2016</p>
+          <h2>Pipeline Technical Director</h2>
+        </div>
+      </div>
+
+      <div class="exp_fortuna_item exp_flex_style">
+        <a href="https://www.fortunapix.com/"><img src="{% static 'images/exp_fortuna.png' %}" alt="" height="200" width="200"></a>
+        <div class="exp_content">
+          <p>Mar 2012 - Apr 2013</p>
+          <h2>Senior Animation Artist</h2>
+        </div>
+      </div>
+
+      <div class="exp_dqe_item exp_flex_style">
+        <a href="https://www.dqentertainment.com/"><img src="{% static 'images/exp_dqe.png' %}" alt="" height="200" width="200"></a>
+        <div class="exp_content">
+          <p>Jun 2011 - Mar 2012</p>
+          <h2>Animation Artist</h2>
+        </div>
+      </div>
+
+      <div class="exp_ibm_item exp_flex_style">
+        <a href="https://www.ibm.co.in/"><img src="{% static 'images/exp_ibm.jpeg' %}" alt="" height="200" width="200"></a>
+        <div class="exp_content">
+          <p>Feb 2007 - Jul 2009</p>
+          <h2>System Engineer</h2>
+        </div>
+      </div>
+    </div>
+  </div>
+
+<!-- End of Experience -->
+
+
+  </div>
+  <div class="footer_content">
+    <p>Thank you for your time!</p><br><br><br>
+    <small>&#169; copyright 2020 d&D media</small>
+  </div>
+  </body>
+  <script type="text/javascript">
+
+  document.addEventListener("contextmenu", function(e){e.preventDefault();}, false);
+    // education
+
+    var aissce_elem = document.getElementsByClassName("edu_aissce")[0];
+    var bca_elem = document.getElementsByClassName("edu_bca")[0];
+    var mca_elem = document.getElementsByClassName("edu_mca")[0];
+
+    aissce_elem.addEventListener("mouseover", function(){mousein_edu_content(this);});
+    aissce_elem.addEventListener("mouseout", function(){mouseout_edu_content(this);});
+    bca_elem.addEventListener("mouseover", function(){mousein_edu_content(this);});
+    bca_elem.addEventListener("mouseout", function(){mouseout_edu_content(this);});
+    mca_elem.addEventListener("mouseover", function(){mousein_edu_content(this);});
+    mca_elem.addEventListener("mouseout", function(){mouseout_edu_content(this);});
+
+    function mousein_edu_content(elem_name)
+    {
+        elem_name.children[1].style.height = "200px";
+        elem_name.children[1].style.width = "990px";
+        elem_name.children[1].style.color = "rgba(20, 33, 61, 1)";
+    }
+
+    function mouseout_edu_content(elem_name)
+    {
+        elem_name.children[1].style.height = "0px";
+        elem_name.children[1].style.width = "0px";
+        elem_name.children[1].style.color = "rgba(20, 33, 61, 0)";
+    }
+
+    var re_elem = document.getElementsByClassName("exp_re_item")[0];
+    var mrx_elem = document.getElementsByClassName("exp_mrx_item")[0];
+    var pfw_elem = document.getElementsByClassName("exp_pfw_item")[0];
+    var prana_elem = document.getElementsByClassName("exp_prana_item")[0];
+    var fortuna_elem = document.getElementsByClassName("exp_fortuna_item")[0];
+    var dqe_elem = document.getElementsByClassName("exp_dqe_item")[0];
+    var ibm_elem = document.getElementsByClassName("exp_ibm_item")[0];
+
+    re_elem.addEventListener("mouseover", function(){mousein_exp_content(this);});
+    re_elem.addEventListener("mouseout", function(){mouseout_exp_content(this);});
+    mrx_elem.addEventListener("mouseover", function(){mousein_exp_content(this);});
+    mrx_elem.addEventListener("mouseout", function(){mouseout_exp_content(this);});
+    pfw_elem.addEventListener("mouseover", function(){mousein_exp_content(this);});
+    pfw_elem.addEventListener("mouseout", function(){mouseout_exp_content(this);});
+    prana_elem.addEventListener("mouseover", function(){mousein_exp_content(this);});
+    prana_elem.addEventListener("mouseout", function(){mouseout_exp_content(this);});
+    fortuna_elem.addEventListener("mouseover", function(){mousein_exp_content(this);});
+    fortuna_elem.addEventListener("mouseout", function(){mouseout_exp_content(this);});
+    dqe_elem.addEventListener("mouseover", function(){mousein_exp_content(this);});
+    dqe_elem.addEventListener("mouseout", function(){mouseout_exp_content(this);});
+    ibm_elem.addEventListener("mouseover", function(){mousein_exp_content(this);});
+    ibm_elem.addEventListener("mouseout", function(){mouseout_exp_content(this);});
+
+
+    function mousein_exp_content(obj_name)
+    {
+
+        for (item of obj_name.parentElement.children)
+        {
+          if (item.className === obj_name.className)
+          {
+            continue;
+          }
+          else
+          {
+            item.children[0].children[0].setAttribute("style", "transition: height 1s, width 1s");
+            item.children[0].children[0].style.height = "100px";
+            item.children[0].children[0].style.width = "100px";
+          }
+        }
+        obj_name.children[1].style.height = "100px";
+        obj_name.children[1].style.width = "400px";
+        obj_name.children[1].style.marginLeft = "130px";
+        obj_name.children[1].style.color = "rgba(20, 33, 61, 1)";
+
+    }
+
+    function mouseout_exp_content(obj_name)
+    {
+
+        for (item of obj_name.parentElement.children)
+        {
+          if (item.className === obj_name.className)
+          {
+            continue;
+          }
+          else
+          {
+            item.children[0].children[0].setAttribute("style", "transition: height 1s, width 1s");
+            item.children[0].children[0].style.height = "200px";
+            item.children[0].children[0].style.width = "200px";
+          }
+        }
+        obj_name.children[1].style.height = "0px";
+        obj_name.children[1].style.width = "0px";
+        obj_name.children[1].style.marginLeft = "0px";
+        obj_name.children[1].style.color = "rgba(20, 33, 61, 0)";
+
+      }
+
+    // end of education
+
+    // skill
+    window.onscroll = function(){animate_content();};
+
+    function animate_content()
+    {
+      if (document.body.scrollTop > 2200 || document.documentElement.scrollTop > 2200)
+      {
+        document.getElementsByClassName("red_gear")[0].style.transform = "rotate(0deg)";
+        document.getElementsByClassName("yellow_gear")[0].style.transform = "rotate(360deg)";
+        document.getElementsByClassName("green_gear")[0].style.transform = "rotate(720deg)";
+        document.getElementsByClassName("blue_gear")[0].style.transform = "rotate(-90deg)";
+        if (document.getElementsByClassName("python_skill")[0].children[0].style.width === "75%")
+        {
+
+        }
+        else
+        {
+            var count_python = 0;
+            document.getElementsByClassName("python_skill")[0].children[0].style.width = "75%";
+            setInterval(function()
+                {
+                  if (count_python <= 8)
+                  {
+                    document.getElementsByClassName("python_skill")[0].children[0].children[1].children[0].innerText = count_python;
+                    count_python += 1;
+                  }
+                  else
+                  {
+                    clearInterval();
+                  }
+                }, 150)
+        }
+        if (document.getElementsByClassName("cplusplus_skill")[0].children[0].style.width === "55%")
+        {
+
+        }
+        else
+        {
+            var count_cplusplus = 0;
+            document.getElementsByClassName("cplusplus_skill")[0].children[0].style.width = "55%";
+            setInterval(function()
+                {
+                  if (count_cplusplus <= 6)
+                  {
+                    document.getElementsByClassName("cplusplus_skill")[0].children[0].children[1].children[0].innerText = count_cplusplus;
+                    count_cplusplus += 1;
+                  }
+                  else
+                  {
+                    clearInterval();
+                  }
+                }, 200)
+        }
+        if (document.getElementsByClassName("javascript_skill")[0].children[0].style.width === "65%")
+        {
+
+        }
+        else
+        {
+            var count_javascript = 0;
+            document.getElementsByClassName("javascript_skill")[0].children[0].style.width = "65%";
+            setInterval(function()
+                {
+                  if (count_javascript <= 7)
+                  {
+                    document.getElementsByClassName("javascript_skill")[0].children[0].children[1].children[0].innerText = count_javascript;
+                    count_javascript += 1;
+                  }
+                  else
+                  {
+                    clearInterval();
+                  }
+                }, 200)
+        }
+        if (document.getElementsByClassName("html_css_skill")[0].children[0].style.width === "85%")
+        {
+
+        }
+        else
+        {
+            var count_html_css = 0;
+            document.getElementsByClassName("html_css_skill")[0].children[0].style.width = "85%";
+            setInterval(function()
+                {
+                  if (count_html_css <= 8)
+                  {
+                    document.getElementsByClassName("html_css_skill")[0].children[0].children[1].children[0].innerText = count_html_css;
+                    count_html_css += 1;
+                  }
+                  else
+                  {
+                    clearInterval();
+                  }
+                }, 200)
+        }
+        if (document.getElementsByClassName("mongodb_skill")[0].children[0].style.width === "45%")
+        {
+
+        }
+        else
+        {
+            var count_mongodb = 0;
+            document.getElementsByClassName("mongodb_skill")[0].children[0].style.width = "45%";
+            setInterval(function()
+                {
+                  if (count_mongodb <= 5)
+                  {
+                    document.getElementsByClassName("mongodb_skill")[0].children[0].children[1].children[0].innerText = count_mongodb;
+                    count_mongodb += 1;
+                  }
+                  else
+                  {
+                    clearInterval();
+                  }
+                }, 200)
+        }
+
+      }
+      else
+      {
+
+      }
+    }
+
+    // var python_obj = document.getElementsByClassName("python_skill")[0];
+    // var cplusplus_obj = document.getElementsByClassName("cplusplus_skill")[0];
+    // var javascript_obj = document.getElementsByClassName("javascript_skill")[0];
+    // var html_css_obj = document.getElementsByClassName("html_css_skill")[0];
+    // var mongodb_obj = document.getElementsByClassName("mongodb_skill")[0];
+    //
+    // function skill_progress(elem_obj)
+    // {
+    //   if (elem_obj.className === "python_skill")
+    //   {
+    //     var count = 0;
+    //     elem_obj.children[0].style.width = "95%";
+    //     setInterval(function()
+    //     {
+    //       if (count <= 8)
+    //       {
+    //         elem_obj.children[0].children[1].children[0].innerText = count;
+    //         count += 1;
+    //       }
+    //       else
+    //       {
+    //         clearInterval();
+    //       }
+    //     }, 500)
+    //   }
+    // }
+    //
+    // python_obj.addEventListener("scroll", function(){skill_progress(this);});
+
+    // end of skill
+
+  </script>
+</html>

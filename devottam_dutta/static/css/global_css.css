@@ -1,0 +1,305 @@
+/* Base------------------------------------------- */
+
+.nav-bar{
+  height: 100px;
+}
+
+.nav-ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: rgba(20, 33, 61, 1);
+}
+
+.nav-ul li{
+  float: left;
+}
+
+.nav-ul li a {
+  display: block;
+  color: rgba(252, 163, 17, 1);
+  text-align: center;
+  font-size: 35px;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+.footer{
+  background-color: rgba(20, 33, 61, 1);
+  height: 50px;
+}
+
+.footer_text{
+  color: rgba(252, 163, 17, 1);
+  text-align: center;
+}
+
+/* About me------------------------------------------- */
+
+.abtme_container{
+  display: flex;
+  flex-wrap: wrap;
+  padding-left: 40px;
+  padding-right: 40px;
+}
+
+.abtme_left{
+  flex: 30%;
+}
+
+.abtme_right{
+  flex: 70%
+}
+
+/* Educations------------------------------------------- */
+.edu{
+  color: blue;
+}
+
+.edu_container{
+  display: flex;
+  justify-content: center;
+}
+
+.edu_container > img {
+  width: 400px;
+  height: 300px;
+  margin: 5px;
+  text-align: center;
+  border-right: 2px solid black;
+  font-size: 30px;
+}
+
+.img_aisse{
+  border-left: 2px solid black;
+}
+
+.edu_container > img > a {
+	display: block;
+  text-decoration: None;
+  color: black;
+}
+
+.edu_aisse{
+  display: none;
+  text-align: center;
+}
+
+.edu_aissce{
+  display: none;
+  text-align: center;
+}
+
+.edu_bca{
+  display: none;
+  text-align: center;
+}
+
+.edu_mca{
+  display: none;
+  text-align: center;
+}
+/* Experience------------------------------------------- */
+.exp{
+  color: gray;
+}
+
+.timeline{
+  height: 50px;
+}
+
+.exp_redes_container{
+  display: none;
+  text-align: center;
+  margin-left: -800px;
+  height: 0px;
+}
+
+.exp_redes_main{
+  /* flex: 50%; */
+  width: 500px;
+  height: 200px;
+  background-color: rgba(252, 163, 17, 1);
+  border: 1px solid black;
+}
+
+.exp_redes_side{
+  /* flex: 50%; */
+}
+
+.exp_mrx_container{
+  display: none;
+  text-align: center;
+  margin-left: -800px;
+  height: 0px;
+}
+
+.exp_mrx_main{
+  /* flex: 50%; */
+  width: 500px;
+}
+
+.exp_mrx_side{
+  /* flex: 50%; */
+}
+
+.exp_pfw_container{
+  display: none;
+  text-align: center;
+  margin-left: -800px;
+}
+
+.exp_pfw_main{
+  /* flex: 50%; */
+  width: 500px;
+}
+
+.exp_pfw_side{
+  /* flex: 50%; */
+}
+
+.exp_prana_container{
+  display: none;
+  text-align: center;
+  margin-left: -800px;
+}
+
+.exp_prana_main{
+  /* flex: 50%; */
+  width: 500px;
+}
+
+.exp_prana_side{
+  /* flex: 50%; */
+}
+
+.exp_fortuna_container{
+  display: none;
+  text-align: center;
+  margin-left: -800px;
+}
+
+.exp_fortuna_main{
+  /* flex: 50%; */
+  width: 500px;
+}
+
+.exp_fortuna_side{
+  /* flex: 50%; */
+}
+
+.exp_dqe_container{
+  display: none;
+  text-align: center;
+  margin-left: -800px;
+}
+
+.exp_dqe_main{
+  /* flex: 50%; */
+  width: 500px;
+}
+
+.exp_dqe_side{
+  /* flex: 50%; */
+}
+
+.exp_ibm_container{
+  display: none;
+  text-align: center;
+  margin-left: -800px;
+}
+
+.exp_ibm_main{
+  /* flex: 50%; */
+  width: 500px;
+}
+
+.exp_ibm_side{
+  /* flex: 50%; */
+}
+
+/* Skills------------------------------------------- */
+
+.skill_container{
+  display: flex;
+  height: 300px;
+}
+
+.python_div{
+  width: 100%;
+  height: 300px;
+  background-color: rgba(255, 190, 11, 1);
+  margin-right: 5px;
+}
+
+.cplus_div{
+  width: 100%;
+  background-color: rgba(251, 86, 7, 1);
+  margin-right: 5px;
+}
+
+.html_div{
+  width: 100%;
+  background-color: rgba(255, 0, 110, 1);
+  margin-right: 5px;
+}
+
+.css_div{
+  width: 100%;
+  background-color: rgba(131, 56, 236, 1);
+  margin-right: 5px;
+}
+
+.javascript_div{
+  width: 100%;
+  background-color: rgba(58, 134, 255, 1);
+  margin-right: 5px;
+}
+
+.python{
+  height: 100%;
+  background-image: url(https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Python-logo-notext.svg/1024px-Python-logo-notext.svg.png);
+  background-position: center;
+  background-size: cover;
+  background-color: rgba(255, 255, 255, 1);
+
+  /* border: solid 2px rgba(255, 190, 11, 1); */
+  transition: height 2s;}
+.python:hover{height: 20%; background-color: rgba(255, 255, 255, 1);}
+.cplus{
+  height: 100%;
+  background-image: url(https://fiverr-res.cloudinary.com/images/q_auto,f_auto/gigs/110047947/original/87892ad61fe6fc7fd27484cb9ccf8016395a91ea/do-any-c-and-c-plus-plus-app-uses-anything-you-need.png);
+  background-position: center;
+  background-size: cover;
+  background-color: rgba(255, 255, 255, 1);
+  /* border: solid 2px rgba(251, 86, 7, 1); */
+  transition: height 2s;}
+.cplus:hover{height: 20%; background-color: rgba(255, 255, 255, 1);}
+.html{
+  height: 100%;
+  background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQmCFjK9OugDv2OYxvz2L4uUO6tGF8uuWS0Gg&usqp=CAU);
+  background-position: center;
+  background-size: cover;
+  background-color: rgba(255, 255, 255, 1);
+  /* border: solid 2px rgba(255, 0, 110, 1); */
+  transition: height 2s;}
+.html:hover{height: 60%; background-color: rgba(255, 255, 255, 1);}
+.css{
+  height: 100%;
+  background-image: url(https://www.iconninja.com/files/237/231/643/css-technology-website-web-internet-css3-style-icon.svg);
+  background-position: center;
+  background-size: cover;
+  background-color: rgba(255, 255, 0, 1);
+  /* border: solid 2px rgba(131, 56, 236, 1); */
+  transition: height 2s;}
+.css:hover{height: 40%; background-color: rgba(255, 255, 255, 1);}
+.javascript{
+  height: 100%;
+  background-image: url(https://toppng.com/uploads/preview/javascript-logo-number-angularjs-node-javascript-logo-11563241338go76tq0nxz.png);
+  background-position: center;
+  background-size: cover;
+  background-color: rgba(0, 255, 255, 1);
+  /* border: solid 2px rgba(58, 134, 255, 1); */
+  transition: height 2s;}
+.javascript:hover{height: 30%; background-color: rgba(255, 255, 255, 1);}
