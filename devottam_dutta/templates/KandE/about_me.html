@@ -5,30 +5,35 @@
   body {font-family: Monospace;}
   .main_container{
   }
-  .back_image{
-    background-image: url({% static 'images/self_photo1.jpg' %});
-    background-position: top;
-    background-size: cover;
+  .back_image
+  {
+    margin-left: 100px;
+    border-radius: 15px;
+    border-color: 2px solid rgba(252, 163, 17, 1);
+    /* background-image: url({% static 'images/self_photo1.jpg' %});
+    background-position: center;
+    background-size: contain;
     background-attachment: fixed;
+    background-repeat: no-repeat; */
     /* filter: blur(4px); */
   /* -webkit-filter: blur(4px); */
     /* background-blend-mode: lighten; */
-    height: 800px;
-    transition: height 1s, background-position 1s;
-  }
+    /* height: 800px;
+    transition: height 1s, background-position 1s; */
+    }
   /* .back_image:hover{
     height: 500px;
     background-position: center;
   } */
 
   .h1_pos1{
-    margin-left: 50px;
-    padding-top: 100px;
-    height: 250px;
-    width: 500px;
+    /* margin-left: 50px; */
+    /* padding-top: 100px; */
+    height: 200px;
+    /* width: 500px; */
     background-color: rgba(20, 33, 61, 1);
     /* background-image: linear-gradient(rgba(20, 33, 61, 1), rgba(20, 33, 61, 0)); */
-    transition: height 1s;
+    /* transition: height 1s; */
   }
 
   /* .h1_pos1:hover{
@@ -56,11 +61,13 @@
 
   .abtme_left{
     flex: 30%;
-    border-right: 2px solid rgba(252, 163, 17, 1);
+    margin-top: 200px;
+
   }
 
   .abtme_right{
-    flex: 70%
+    flex: 70%;
+    border-left: 2px solid rgba(252, 163, 17, 1);
   }
 
   .para_about_me{
@@ -87,7 +94,7 @@
   }
 
   .edu_flex_style {
-    background-color: rgba(229, 229, 229, 0.3);
+    background-color: rgba(229, 229, 229, 0);
     margin: 5px;
     text-align: center;
     line-height: 28px;
@@ -103,11 +110,14 @@
     background-color: rgba(229, 229, 229, 1);
     }
 
-  .edu_image{
-    background-image: url({% static 'images/edu_image.jpg' %});
+  .edu_image
+    {
+      background-color: rgba(20, 33, 61, 1);
+
+    /* background-image: url({% static 'images/edu_image.jpg' %});
     background-position: top;
     background-size: cover;
-    background-attachment: fixed;
+    background-attachment: fixed; */
     /* filter: blur(4px); */
     /* -webkit-filter: blur(4px); */
     /* background-blend-mode: lighten; */
@@ -142,10 +152,11 @@
   /* experience */
 
   .exp_image{
-    background-image: url({% static 'images/exp_image.jpg' %});
+    background-color: rgba(20, 33, 61, 1);
+    /* background-image: url({% static 'images/exp_image.jpg' %});
     background-position: top;
     background-size: cover;
-    background-attachment: fixed;
+    background-attachment: fixed; */
     height: 800px;
     /* overflow: hidden; */
   }
@@ -173,7 +184,7 @@
 
   .exp_flex_style
     {
-      background-color: rgba(229, 229, 229, 0.3);
+      background-color: rgba(229, 229, 229, 0);
       margin: 5px;
       text-align: center;
       /* line-height: 28px; */
@@ -236,11 +247,10 @@
 .gear_group
   {
     flex: 50%;
-    border-right: 2px solid rgba(252, 163, 17, 1);;
     width: 210px;
     padding-left: 100px;
     padding-top: 100px;
-    overflow: hidden;
+    /* overflow: hidden; */
   }
 
 .red_gear
@@ -287,6 +297,8 @@
 .skill_group
   {
     flex: 50%;
+    border-right: 2px solid rgba(252, 163, 17, 1);
+    background-color: rgba(20, 33, 61, 1);
   }
 
 .skill_progress
@@ -309,9 +321,9 @@
   {
     padding-top: 100px;
     height: 200px;
-    color: rgba(252, 163, 17, 1);
+    color: rgba(20, 33, 61, 1);
     font-size: 25px;
-    background-color: rgba(20, 33, 61, 1);
+    background-color: rgba(252, 163, 17, 1);
     text-align: center;
   }
 </style>
@@ -321,11 +333,14 @@
   </head>
   <body>
   <div class="main_container">
-    <div class="back_image">
+    <!-- <div class="back_image"> -->
       <div class="h1_pos1">
         <h1 class="abtme_h1">“To be yourself in a world that is constantly trying to make you something else is the greatest accomplishment.” —Ralph Waldo Emerson.</h1>
+        <div class="back_image">
+          <img src="{% static 'images/self_photo1.jpg' %}" alt="" height="300" width="200">
+        </div>
       </div>
-    </div>
+    <!-- </div> -->
 
 <!-- About me  -->
 
@@ -354,12 +369,12 @@
       <div class="abtme_right">
         <h2 class="h2_about_me">Devottam Dutta</h2>
         <p class="para_about_me">
-        Comming soon.
+        Coming Soon.
         </p>
         <hr class="hr_about_me">
         <h2 class="h2_about_me">Life & Family</h2>
         <p class="para_about_me">
-        Comming soon.
+        Coming Soon.
         </p>
       </div>
     </div>
@@ -373,7 +388,7 @@
     </div>
     <div class="edu_container">
       <div class="edu_aissce edu_flex_style">
-        <img class="img_aissce" src="{% static 'images/cbse.png' %}" alt="image not found/missing" height="200" width="240">
+        <img class="img_aissce" src="{% static 'images/cbse2.png' %}" alt="image not found/missing" height="200" width="200">
         <div class="edu_content">
           <h2>
             All India Senior School Certificate Examinations.
@@ -547,7 +562,7 @@
   </body>
   <script type="text/javascript">
 
-  document.addEventListener("contextmenu", function(e){e.preventDefault();}, false);
+  // document.addEventListener("contextmenu", function(e){e.preventDefault();}, false);
     // education
 
     var aissce_elem = document.getElementsByClassName("edu_aissce")[0];
