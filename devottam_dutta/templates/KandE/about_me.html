@@ -95,6 +95,8 @@
 
   .edu_flex_style {
     background-color: rgba(229, 229, 229, 0);
+    border: 2px solid rgba(252, 163, 17, 1);
+    border-radius: 15px;
     margin: 5px;
     text-align: center;
     line-height: 28px;
@@ -128,7 +130,7 @@
     margin-left: 50px;
     padding-top: 100px;
     height: 250px;
-    width: 500px;
+    width: 90%;
     background-color: rgba(20, 33, 61, 1);
     transition: height 1s;
   }
@@ -153,10 +155,10 @@
 
   .exp_image{
     background-color: rgba(20, 33, 61, 1);
-    /* background-image: url({% static 'images/exp_image.jpg' %});
-    background-position: top;
-    background-size: cover;
-    background-attachment: fixed; */
+    /* background-image: url({% static 'images/exp_image.jpg' %}); */
+    /* background-position: top; */
+    /* background-size: cover; */
+    background-attachment: fixed;
     height: 800px;
     /* overflow: hidden; */
   }
@@ -165,7 +167,7 @@
     margin-left: 50px;
     padding-top: 100px;
     height: 250px;
-    width: 500px;
+    width: 90%;
     background-color: rgba(20, 33, 61, 1);
     transition: height 1s;
   }
@@ -185,8 +187,11 @@
   .exp_flex_style
     {
       background-color: rgba(229, 229, 229, 0);
+      border: 2px solid rgba(252, 163, 17, 1);
+      border-radius: 15px;
       margin: 5px;
       text-align: center;
+      overflow: hidden;
       /* line-height: 28px; */
       /* line-height: 28px; */
       /* font-size: 30px; line-height 1s*/
@@ -222,7 +227,7 @@
     /* margin-left: 50px; */
     /* margin-left: 0px; */
     height: 100px;
-    width: 500px;
+    width: 90%;
     background-color: rgba(20, 33, 61, 1);
     transition: height 1s;
 
@@ -297,7 +302,7 @@
 .skill_group
   {
     flex: 50%;
-    border-right: 2px solid rgba(252, 163, 17, 1);
+    border: 2px solid rgba(252, 163, 17, 1);
     background-color: rgba(20, 33, 61, 1);
   }
 
@@ -384,7 +389,7 @@
 <!-- Education -->
    <div class="edu_image">
     <div class="h1_pos2">
-      <h1 class="edu_h1">“The function of education is to teach one to think intensively and to think critically. Intelligence plus character – that is the goal of true education” – Martin Luther King.</h1>
+      <h1 class="edu_h1">“The function of <span>e</span><span>d</span><span>u</span><span>c</span><span>a</span><span>t</span><span>i</span><span>o</span><span>n</span> is to teach one to think intensively and to think critically. Intelligence plus character – that is the goal of true education” – Martin Luther King.</h1>
     </div>
     <div class="edu_container">
       <div class="edu_aissce edu_flex_style">
@@ -443,7 +448,7 @@
 
       <div class="skill_group">
         <div class="h1_pos4">
-          <h1 class="skill_h1">“Once you Stop Learning, you Start Dying” - Albert Einstein.</h1>
+          <h1 class="skill_h1">“Once you Stop <span>L</span><span>e</span><span>a</span><span>r</span><span>n</span><span>i</span><span>n</span><span>g</span>, you Start Dying” - Albert Einstein.</h1>
         </div>
         <div class="python_skill">
           <div class="skill_progress">
@@ -484,9 +489,9 @@
 <!-- End of Skill -->
 
 <!-- Experience -->
-  <div class="exp_image">
+  <div class="exp_image">x
     <div class="h1_pos3">
-      <h1 class="exp_h1">“A mind that is stretched by a new experience can never go back to its old dimensions.” - Oliver Wendell Holmes.</h1>
+      <h1 class="exp_h1">“A mind that is stretched by a new <span>e</span><span>x</span><span>p</span><span>e</span><span>r</span><span>i</span><span>e</span><span>n</span><span>c</span><span>e</span> can never go back to its old dimensions.” - Oliver Wendell Holmes.</h1>
     </div>
     <div class="exp_container">
 
@@ -564,6 +569,36 @@
 
   // document.addEventListener("contextmenu", function(e){e.preventDefault();}, false);
     // education
+    let edu_header_obj = document.getElementsByClassName("edu_h1")[0]
+    edu_header_obj.addEventListener("mouseover", function(){make_header_upper(this);});
+
+    let skill_header_obj = document.getElementsByClassName("skill_h1")[0]
+    skill_header_obj.addEventListener("mouseover", function(){make_header_upper(this);});
+
+    let exp_header_obj = document.getElementsByClassName("exp_h1")[0]
+    exp_header_obj.addEventListener("mouseover", function(){make_header_upper(this);});
+
+    function make_header_upper(obj_name)
+    {
+      let i = 0;
+      let obj_len = obj_name.children.length;
+      setInterval(
+        function()
+        {
+          if (i < obj_len)
+          {
+            let to_upper_text = obj_name.children[i].innerText.toUpperCase();
+            obj_name.children[i].innerText = to_upper_text;
+            obj_name.children[i].style.fontSize = "40px";
+            i += 1;
+          }
+          else
+          {
+            clearInterval();
+          }
+        },
+          250);
+    }
 
     var aissce_elem = document.getElementsByClassName("edu_aissce")[0];
     var bca_elem = document.getElementsByClassName("edu_bca")[0];
@@ -589,6 +624,10 @@
         elem_name.children[1].style.width = "0px";
         elem_name.children[1].style.color = "rgba(20, 33, 61, 0)";
     }
+
+    // end of education
+
+    // Experience
 
     var re_elem = document.getElementsByClassName("exp_re_item")[0];
     var mrx_elem = document.getElementsByClassName("exp_mrx_item")[0];
@@ -660,7 +699,7 @@
 
       }
 
-    // end of education
+      // End of Experience
 
     // skill
     // window.onscroll = function(){animate_content();};
@@ -781,39 +820,6 @@
         }
 
       }
-      // else
-      // {
-      //
-      // }
-
-    // var python_obj = document.getElementsByClassName("python_skill")[0];
-    // var cplusplus_obj = document.getElementsByClassName("cplusplus_skill")[0];
-    // var javascript_obj = document.getElementsByClassName("javascript_skill")[0];
-    // var html_css_obj = document.getElementsByClassName("html_css_skill")[0];
-    // var mongodb_obj = document.getElementsByClassName("mongodb_skill")[0];
-    //
-    // function skill_progress(elem_obj)
-    // {
-    //   if (elem_obj.className === "python_skill")
-    //   {
-    //     var count = 0;
-    //     elem_obj.children[0].style.width = "95%";
-    //     setInterval(function()
-    //     {
-    //       if (count <= 8)
-    //       {
-    //         elem_obj.children[0].children[1].children[0].innerText = count;
-    //         count += 1;
-    //       }
-    //       else
-    //       {
-    //         clearInterval();
-    //       }
-    //     }, 500)
-    //   }
-    // }
-    //
-    // python_obj.addEventListener("scroll", function(){skill_progress(this);});
 
     // end of skill
 
