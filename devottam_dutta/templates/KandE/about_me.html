@@ -3,13 +3,18 @@
 <html lang="en" dir="ltr">
 <style media="screen">
   body {font-family: Monospace;}
-  .main_container{
-  }
+  .main_container
+    {
+    }
   .back_image
-  {
-    margin-left: 100px;
-    border-radius: 15px;
-    border-color: 2px solid rgba(252, 163, 17, 1);
+    {
+      height: 300px;
+      width: 200px;
+      margin-top: -300px;
+      margin-left: 100px;
+      border-radius: 15px;
+      border: 2px solid rgba(252, 163, 17, 1);
+      overflow: hidden;
     /* background-image: url({% static 'images/self_photo1.jpg' %});
     background-position: center;
     background-size: contain;
@@ -21,10 +26,6 @@
     /* height: 800px;
     transition: height 1s, background-position 1s; */
     }
-  /* .back_image:hover{
-    height: 500px;
-    background-position: center;
-  } */
 
   .h1_pos1{
     /* margin-left: 50px; */
@@ -341,9 +342,7 @@
     <!-- <div class="back_image"> -->
       <div class="h1_pos1">
         <h1 class="abtme_h1">“To be yourself in a world that is constantly trying to make you something else is the greatest accomplishment.” —Ralph Waldo Emerson.</h1>
-        <div class="back_image">
-          <img src="{% static 'images/self_photo1.jpg' %}" alt="" height="300" width="200">
-        </div>
+
       </div>
     <!-- </div> -->
 
@@ -351,6 +350,9 @@
 
     <div class="abtme_container">
       <div class="abtme_left">
+        <div class="back_image">
+          <img src="{% static 'images/self_photo1.jpg' %}" alt="" height="300" width="200">
+        </div>
         <ul class="abtme_ul">
           <li>Born</li>
           <small>24 December 1985, Pune, Maharashtra</small>
