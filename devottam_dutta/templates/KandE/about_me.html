@@ -10,7 +10,7 @@
     {
       height: 300px;
       width: 200px;
-      margin-top: -300px;
+      margin-top: -320px;
       margin-left: 100px;
       border-radius: 15px;
       border: 2px solid rgba(252, 163, 17, 1);
@@ -351,7 +351,7 @@
     <div class="abtme_container">
       <div class="abtme_left">
         <div class="back_image">
-          <img src="{% static 'images/self_photo1.jpg' %}" alt="" height="300" width="200">
+          <img src="{% static 'images/self_photo1.jpg' %}" alt="" height="300" width="220">
         </div>
         <ul class="abtme_ul">
           <li>Born</li>
@@ -376,7 +376,7 @@
       <div class="abtme_right">
         <h2 class="h2_about_me">Devottam Dutta</h2>
         <p class="para_about_me">
-        Coming Soon.
+        I am a VFX Pipeline Technical Director having experience of about 11+ years. After completion of my Bachelor’s of Computer Application in 2006, I got a job offer as a System Engineer at IBM India Pvt. Ltd., thats basically L1 Support  Engineer for the EUS. In Year 2009, I decided to change my career from IT to Animation/VFX. Resigned from IBM India Pvt Ltd and took admission in Webel Animation Academy, Salt Lake. If was fun to learn Animation and VFX and that makes me happy. After 1 Year of the course, have been placed in DQE Hyderabad Campus as an Animation Artist. It’s a new beginning with a different location and culture. The Production house was like a factory, where you have 3 shifts and you need to follow the Instruction of the supervisor’s, even if you do it right as per your skill, its not going to be approved. This is not the animation I was supposed to do, then I jump to FortunaPix a K-12 education content creation company as a Senior Animation Artist, also started learning Python & MEL and helping different departments with the custom tools using Python & MEL. It was the Year 2013 when I got a call from Prana Studios Mumbai to join as a Junior Pipeline TD & it was an excitement to be in the Prana Tech Family. I started learning new way of coding and the pipeline more deeply. I introduced the Compositing Pipeline in the production. After working 3 Years at Prana Studio, the time has came to start a new chapter, year 2016 I joined Prime Focus World, which is now DNeg India as a Pipeline TD and fully dedicated to Nuke Pipeline Development. Also I was working as a Part time Python Faculty at Digital Lync School. Which enhanced my python skill more by explaining and provide solutions to the students. If you want to master a subject, you should teach that subject for better perspective. I always want to know about the VFX Pipline, how the real footage get merged with the CG. Year 2018 I got the opportunity to work with the esteemed and one of the old company named as Technicolor MRX VFX Division as a Pipeline Technical Director. I learned about the MRX VFX pipeline and also developed tools for the different departments using MAYA and NUKE API’s. After 1 Year of working at MRX, the job was monotonous and only support job, as development was happening at MRX Toronto and we are just applying that in Bengaluru location. On 2019 I got an offer from Optizm Consulting as a Pipline Engineer where I have to Work for Redesin-Group, It’s a LA based company who provides Pipeline Services to the Global Studios. After joining the Redesign-Group, I found the support was only with the Autodesk Shotgun. There is no pipeline to support or develop, everything was on Shotgun Desktop and API configuration. It was hard to work at a different time zone and that definitely affects your mind and body. I was not belong to direct employee of redesign-group, need to always think about the client satisfaction and I am not at all good in that. So gradually my work, my health, my mind started giving up and after working for 1.5 years, I have been layoff from optizm with 1 month notice. Initially I was upset, but later I found my life back. Currently I am learning new technologies and planning to be a entrepreneur.
         </p>
         <hr class="hr_about_me">
         <h2 class="h2_about_me">Life & Family</h2>
@@ -571,14 +571,14 @@
 
   document.addEventListener("contextmenu", function(e){e.preventDefault();}, false);
     // education
-    let edu_header_obj = document.getElementsByClassName("edu_h1")[0]
-    edu_header_obj.addEventListener("mouseover", function(){make_header_upper(this);});
+    let edu_header_obj = document.getElementsByClassName("edu_h1")[0];
+    document.getElementsByClassName("edu_container")[0].addEventListener("mouseover", function(){make_header_upper(edu_header_obj);});
 
-    let skill_header_obj = document.getElementsByClassName("skill_h1")[0]
-    skill_header_obj.addEventListener("mouseover", function(){make_header_upper(this);});
+    let skill_header_obj = document.getElementsByClassName("skill_h1")[0];
+    document.getElementsByClassName('skill_container')[0].addEventListener("mouseover", function(){make_header_upper(skill_header_obj);});
 
-    let exp_header_obj = document.getElementsByClassName("exp_h1")[0]
-    exp_header_obj.addEventListener("mouseover", function(){make_header_upper(this);});
+    let exp_header_obj = document.getElementsByClassName("exp_h1")[0];
+    document.getElementsByClassName('exp_container')[0].addEventListener("mouseover", function(){make_header_upper(exp_header_obj);});
 
     function make_header_upper(obj_name)
     {
